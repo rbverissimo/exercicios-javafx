@@ -1,6 +1,7 @@
 package basico;
 
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -20,10 +21,14 @@ public class Contador extends Application {
 		Button botaoDecremento = new Button("-");
 		
 		HBox boxBotoes = new HBox();
+		boxBotoes.setAlignment(Pos.CENTER);
+		boxBotoes.setSpacing(10);
 		boxBotoes.getChildren().add(botaoIncremento);
 		boxBotoes.getChildren().add(botaoDecremento);
 		
 		VBox boxPrincipal = new VBox();
+		boxPrincipal.setSpacing(10);
+		boxPrincipal.setAlignment(Pos.CENTER);
 		boxPrincipal.getChildren().add(labelTitulo);
 		boxPrincipal.getChildren().add(labelNumero);
 		boxPrincipal.getChildren().add(boxBotoes);
