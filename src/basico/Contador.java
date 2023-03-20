@@ -19,16 +19,17 @@ public class Contador extends Application {
 		Button botaoIncremento = new Button("+");
 		Button botaoDecremento = new Button("-");
 		
-		HBox boxBotes = new HBox();
+		HBox boxBotoes = new HBox();
+		boxBotoes.getChildren().add(botaoIncremento);
+		boxBotoes.getChildren().add(botaoDecremento);
 		
 		VBox boxPrincipal = new VBox();
 		boxPrincipal.getChildren().add(labelTitulo);
 		boxPrincipal.getChildren().add(labelNumero);
-		boxPrincipal.getChildren().add(botaoIncremento);
-		boxPrincipal.getChildren().add(botaoDecremento);
+		boxPrincipal.getChildren().add(boxBotoes);
 		
 		
-		Scene cenaPrincipal = new Scene(boxPrincipal);
+		Scene cenaPrincipal = new Scene(boxPrincipal, 400, 400);
 		
 		
 		primaryStage.setScene(cenaPrincipal);
