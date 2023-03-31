@@ -23,15 +23,18 @@ public class Contador extends Application {
 		labelNumero.getStyleClass().add("numero");
 		
 		Button botaoIncremento = new Button("+");
+		botaoIncremento.getStyleClass().add("botoes");
 		botaoIncremento.setOnAction(e -> {
 			contador++;
 			labelNumero.setText(Integer.toString(contador));
 		});
 		
 		Button botaoDecremento = new Button("-");
+		botaoDecremento.getStyleClass().add("botoes");
 		botaoDecremento.setOnAction(e -> { contador--; 
 			labelNumero.setText(Integer.toString(contador));
 			});
+		
 		
 		HBox boxBotoes = new HBox();
 		boxBotoes.setAlignment(Pos.CENTER);
@@ -56,7 +59,6 @@ public class Contador extends Application {
 		cenaPrincipal.getStylesheets().add(pathCss);
 		cenaPrincipal.getStylesheets()
 					.add("https://fonts.googleapis.com/css2?family=Oswald");
-		
 		
 		
 		primaryStage.setScene(cenaPrincipal);
