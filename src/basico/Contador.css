@@ -6,6 +6,7 @@
 
 .titulo {
 	-fx-text-fill: #c7dbe6;
+	-fx-font-size: 28px;
 }
 
 .numero {
@@ -26,6 +27,6 @@
 	-fx-text-fill: #34ad3e;
 }
 
-.vermelha {
+.vermelho {
 	-fx-text-fill: #c80d3c;
 }
