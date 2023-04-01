@@ -39,6 +39,7 @@ public class Wizard extends Application {
 		labelCena.setAlignment(Pos.CENTER);
 		
 		Button proximoPasso = new Button("Ir");
+		proximoPasso.getStyleClass().add("botao-navegacao");
 		proximoPasso.setAlignment(Pos.BOTTOM_RIGHT);
 		proximoPasso.setPrefSize(80, 30);
 		proximoPasso.setOnAction(e -> {
@@ -63,12 +64,14 @@ public class Wizard extends Application {
 	private void criarPasso2() {
 		
 		Button proximoPasso = new Button("Ir");
+		proximoPasso.getStyleClass().add("botao-navegacao");
 		proximoPasso.setPrefSize(80, 30);
 		proximoPasso.setOnAction(e -> {
 			janela.setScene(passo3);
 		});
 		
 		Button voltarPasso = new Button("Voltar");
+		voltarPasso.getStyleClass().add("botao-navegacao");
 		voltarPasso.setPrefSize(80, 30);
 		voltarPasso.setOnAction(e -> {
 			janela.setScene(passo1);
@@ -92,14 +95,23 @@ public class Wizard extends Application {
 	private void criarPasso3() {
 		
 		Button voltarPasso = new Button("Voltar");
+		voltarPasso.getStyleClass().add("botao-navegacao");
 		voltarPasso.setPrefSize(80, 30);
 		voltarPasso.setOnAction(e -> {
 			janela.setScene(passo2);
 		});
 		
+		Button finalizar = new Button("Finalizar");
+		finalizar.getStyleClass().add("botao-navegacao");
+		finalizar.setPrefSize(80, 30);
+		finalizar.setOnAction(e -> {
+			System.exit(0);
+		});
+		
 		HBox box = new HBox();
 		box.setAlignment(Pos.BOTTOM_RIGHT);
 		box.getChildren().add(voltarPasso);
+		box.getChildren().add(finalizar);
 		
 		
 		String pathCSS = getClass()
