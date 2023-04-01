@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
@@ -21,19 +22,33 @@ public class Wizard extends Application {
 		
 		criarPasso1();
 		
-		primaryStage.setScene(passo1);
-		primaryStage.setTitle("Wizard");
-		primaryStage.show();
+		criarPasso2();
+		
+		criarPasso3();
+		
+		janela.setScene(passo1);
+		janela.setTitle("Wizard");
+		janela.show();
 		
 	}
 	
 	private void criarPasso1() {
+		
+		Label labelCena = new Label();
+		labelCena.setText("Bem-vindo!!! ");
+		labelCena.setAlignment(Pos.CENTER);
+		
 		Button proximoPasso = new Button("Ir");
+		proximoPasso.setAlignment(Pos.BOTTOM_RIGHT);
 		proximoPasso.setPrefSize(80, 30);
+		proximoPasso.setOnAction(e -> {
+			janela.setScene(passo2);
+		});
 		
 		
 		HBox box = new HBox();
-		box.setAlignment(Pos.BOTTOM_RIGHT);
+		box.setAlignment(Pos.CENTER);
+		box.getChildren().add(labelCena);
 		box.getChildren().add(proximoPasso);
 		
 		String pathCSS = getClass()
@@ -48,7 +63,16 @@ public class Wizard extends Application {
 	private void criarPasso2() {
 		
 		Button proximoPasso = new Button("Ir");
+		proximoPasso.setPrefSize(80, 30);
+		proximoPasso.setOnAction(e -> {
+			janela.setScene(passo3);
+		});
+		
 		Button voltarPasso = new Button("Voltar");
+		voltarPasso.setPrefSize(80, 30);
+		voltarPasso.setOnAction(e -> {
+			janela.setScene(passo1);
+		});
 		
 		HBox box = new HBox();
 		box.setAlignment(Pos.BOTTOM_RIGHT);
@@ -67,13 +91,16 @@ public class Wizard extends Application {
 	
 	private void criarPasso3() {
 		
-		Button proximoPasso = new Button("Ir");
 		Button voltarPasso = new Button("Voltar");
+		voltarPasso.setPrefSize(80, 30);
+		voltarPasso.setOnAction(e -> {
+			janela.setScene(passo2);
+		});
 		
 		HBox box = new HBox();
 		box.setAlignment(Pos.BOTTOM_RIGHT);
 		box.getChildren().add(voltarPasso);
-		box.getChildren().add(proximoPasso); 
+		
 		
 		String pathCSS = getClass()
 				.getResource("/basico/Wizard.css")
