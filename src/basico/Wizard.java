@@ -17,6 +17,7 @@ public class Wizard extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
+		janela = primaryStage;
 		
 		criarPasso1();
 		
@@ -28,12 +29,20 @@ public class Wizard extends Application {
 	
 	private void criarPasso1() {
 		Button proximoPasso = new Button("Ir");
+		proximoPasso.setPrefSize(80, 30);
+		
 		
 		HBox box = new HBox();
 		box.setAlignment(Pos.BOTTOM_RIGHT);
 		box.getChildren().add(proximoPasso);
 		
+		String pathCSS = getClass()
+				.getResource("/basico/Wizard.css")
+				.toExternalForm();
+		
+		
 		passo1 = new Scene(box, 400, 400);
+		passo1.getStylesheets().add(pathCSS);
 	}
 	
 	private void criarPasso2() {
@@ -46,8 +55,36 @@ public class Wizard extends Application {
 		box.getChildren().add(voltarPasso);
 		box.getChildren().add(proximoPasso); 
 		
+		String pathCSS = getClass()
+				.getResource("/basico/Wizard.css")
+				.toExternalForm();
+		
 		passo2 = new Scene(box, 400, 400);
+		passo2.getStylesheets().add(pathCSS);
+		
 	}
+	
+	
+	private void criarPasso3() {
+		
+		Button proximoPasso = new Button("Ir");
+		Button voltarPasso = new Button("Voltar");
+		
+		HBox box = new HBox();
+		box.setAlignment(Pos.BOTTOM_RIGHT);
+		box.getChildren().add(voltarPasso);
+		box.getChildren().add(proximoPasso); 
+		
+		String pathCSS = getClass()
+				.getResource("/basico/Wizard.css")
+				.toExternalForm();
+		
+		passo3 = new Scene(box, 400, 400);
+		passo3.getStylesheets().add(pathCSS);
+		
+	}
+	
+	
 	
 	public static void main(String[] args) {
 		launch(args);
