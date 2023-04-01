@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Wizard extends Application {
@@ -40,24 +41,28 @@ public class Wizard extends Application {
 		
 		Button proximoPasso = new Button("Ir");
 		proximoPasso.getStyleClass().add("botao-navegacao");
-		proximoPasso.setAlignment(Pos.BOTTOM_RIGHT);
+		proximoPasso.setAlignment(Pos.CENTER);
 		proximoPasso.setPrefSize(80, 30);
 		proximoPasso.setOnAction(e -> {
 			janela.setScene(passo2);
 		});
 		
 		
-		HBox box = new HBox();
-		box.setAlignment(Pos.CENTER);
-		box.getChildren().add(labelCena);
-		box.getChildren().add(proximoPasso);
+		
+		HBox boxBotoes = new HBox();
+		boxBotoes.setAlignment(Pos.BOTTOM_RIGHT);
+		boxBotoes.getChildren().add(proximoPasso);
+		
+		VBox boxPrincipal = new VBox();
+		boxPrincipal.getChildren().add(labelCena);
+		boxPrincipal.getChildren().add(boxBotoes);
 		
 		String pathCSS = getClass()
 				.getResource("/basico/Wizard.css")
 				.toExternalForm();
 		
 		
-		passo1 = new Scene(box, 400, 400);
+		passo1 = new Scene(boxPrincipal, 400, 400);
 		passo1.getStylesheets().add(pathCSS);
 	}
 	
