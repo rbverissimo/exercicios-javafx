@@ -11,8 +11,9 @@ public class AppLayout extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		
 		Parent raiz = null;
-		//raiz = new TesteAnchorPane();
+		raiz = new TesteAnchorPane();
 		raiz = new TesteBorderPane();
+		raiz = new TesteFlowPane();
 		
 		/* VBox tempCaixa = new VBox();
 		tempCaixa.getChildren().add(new Caixa().comTexto("1"));
