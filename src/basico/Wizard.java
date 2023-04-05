@@ -54,6 +54,7 @@ public class Wizard extends Application {
 		boxBotoes.getChildren().add(proximoPasso);
 		
 		VBox boxPrincipal = new VBox();
+		boxPrincipal.setAlignment(Pos.CENTER);
 		boxPrincipal.getChildren().add(labelCena);
 		boxPrincipal.getChildren().add(boxBotoes);
 		
