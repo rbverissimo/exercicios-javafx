@@ -23,15 +23,20 @@ public class TesteAnchorPane extends AnchorPane {
 		setBottomAnchor(q4, 10.0);
 		setRightAnchor(q4, 10.0);
 		
-		HBox centro = new HBox();
-		
 		Quadrado q5 = new Quadrado();
 		setTopAnchor(q5, 250.0);
 		setLeftAnchor(q5, 350.0);
 		
+		HBox centro = new HBox();
+		setTopAnchor(centro, 110.0);
+		setBottomAnchor(centro, 110.0);
+		setLeftAnchor(centro, 110.0);
+		setRightAnchor(centro, 110.0);
 		
 		
-		getChildren().addAll(q1, q2, q3, q4, q5);
+		getChildren().add(q5);
+		
+		getChildren().addAll(q1, q2, q3, q4, centro);
 	}
 
 }
