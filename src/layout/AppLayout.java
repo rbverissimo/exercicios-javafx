@@ -1,6 +1,7 @@
 package layout;
 
 import javafx.application.Application;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -8,6 +9,10 @@ public class AppLayout extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		
+		Parent raiz = null;
+		//raiz = new TesteAnchorPane();
+		raiz = new TesteBorderPane();
 		
 		/* VBox tempCaixa = new VBox();
 		tempCaixa.getChildren().add(new Caixa().comTexto("1"));
@@ -25,8 +30,8 @@ public class AppLayout extends Application {
 		Scene principal = new Scene(tempCaixa, 700, 550);
 		*/
 		
-		Scene principal = new Scene(new TesteAnchorPane(), 800, 600);
-		
+		//Scene principal = new Scene(new TesteAnchorPane(), 800, 600);
+		Scene principal = new Scene(raiz, 800,600);
 		
 		
 		primaryStage.setScene(principal);
