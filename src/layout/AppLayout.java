@@ -2,7 +2,6 @@ package layout;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class AppLayout extends Application {
@@ -10,7 +9,7 @@ public class AppLayout extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		VBox tempCaixa = new VBox();
+		/* VBox tempCaixa = new VBox();
 		tempCaixa.getChildren().add(new Caixa().comTexto("1"));
 		tempCaixa.getChildren().add(new Caixa().comTexto("2"));
 		tempCaixa.getChildren().add(new Caixa().comTexto("3"));
@@ -23,8 +22,12 @@ public class AppLayout extends Application {
 			tempQuadrado.getChildren().add(new Quadrado());
 		}
 		
+		Scene principal = new Scene(tempCaixa, 700, 550);
+		*/
 		
-		Scene principal = new Scene(tempQuadrado, 700, 550);
+		Scene principal = new Scene(new TesteAnchorPane(), 800, 600);
+		
+		
 		
 		primaryStage.setScene(principal);
 		primaryStage.setTitle("Gerenciadores de Layout");
