@@ -1,6 +1,7 @@
 package layout;
 
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 
 public class TesteAnchorPane extends AnchorPane {
 	
@@ -22,7 +23,15 @@ public class TesteAnchorPane extends AnchorPane {
 		setBottomAnchor(q4, 10.0);
 		setRightAnchor(q4, 10.0);
 		
-		getChildren().addAll(q1, q2, q3, q4);
+		HBox centro = new HBox();
+		
+		Quadrado q5 = new Quadrado();
+		setTopAnchor(q5, 250.0);
+		setLeftAnchor(q5, 350.0);
+		
+		
+		
+		getChildren().addAll(q1, q2, q3, q4, q5);
 	}
 
 }
