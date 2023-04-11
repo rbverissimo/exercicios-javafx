@@ -4,6 +4,7 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 
+@SuppressWarnings("unused")
 public class TesteGridPane extends GridPane {
 
 	public TesteGridPane() {
@@ -17,12 +18,27 @@ public class TesteGridPane extends GridPane {
 		
 		setGridLinesVisible(true);
 		
+		getColumnConstraints().addAll(cc(), cc(), cc(), cc(), cc());
+		getRowConstraints().addAll(rc(), rc(), rc(), rc(), rc());
+		
+		setVgap(10);
+		setHgap(10);
+		
+		add(c1, 0, 0, 2, 2);
+		add(c2, 1, 1, 2, 2);
+		add(c3, 4, 2, 1, 3);
+		add(c4, 3, 1);
+		add(c5, 0, 4, 2, 1);
+		add(c6, 3, 3);
+		
+		
 		
 	}
 	
 	private ColumnConstraints cc() {
 		ColumnConstraints cc = new ColumnConstraints();
 		cc.setPercentWidth(20);
+		cc.setFillWidth(true);
 		
 		return cc; 
 	}
@@ -30,6 +46,7 @@ public class TesteGridPane extends GridPane {
 	private RowConstraints rc() {
 		RowConstraints rc = new RowConstraints();
 		rc.setPercentHeight(30);
+		rc.setFillHeight(true);
 		
 		return rc; 
 	}
