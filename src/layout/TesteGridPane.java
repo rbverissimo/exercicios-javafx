@@ -19,7 +19,7 @@ public class TesteGridPane extends GridPane {
 		setGridLinesVisible(true);
 		
 		getColumnConstraints().addAll(cc(), cc(), fcc(), cc(), cc());
-		getRowConstraints().addAll(rc(), rc(), rc(), rc(), rc());
+		getRowConstraints().addAll(rc(), rc(), frc(), rc(), rc());
 		
 		setVgap(10);
 		setHgap(10);
@@ -45,8 +45,8 @@ public class TesteGridPane extends GridPane {
 	
 	private ColumnConstraints fcc() {
 		ColumnConstraints fcc = new ColumnConstraints();
-		fcc.setMinWidth(200);
-		fcc.setMaxWidth(200);
+		fcc.setMinWidth(50);
+		fcc.setMaxWidth(50);
 		
 		return fcc;
 	}
@@ -57,6 +57,14 @@ public class TesteGridPane extends GridPane {
 		rc.setFillHeight(true);
 		
 		return rc; 
+	}
+	
+	private RowConstraints frc() {
+		RowConstraints frc = new RowConstraints();
+		frc.setMaxHeight(30);
+		frc.setMinHeight(30);
+		
+		return frc;
 	}
 	
 }
