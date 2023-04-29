@@ -15,6 +15,7 @@ public class AppLayout extends Application {
 		raiz = new TesteBorderPane();
 		raiz = new TesteFlowPane();
 		raiz = new TesteGridPane();
+		raiz = new TesteStackPane();
 		
 		/* VBox tempCaixa = new VBox();
 		tempCaixa.getChildren().add(new Caixa().comTexto("1"));
