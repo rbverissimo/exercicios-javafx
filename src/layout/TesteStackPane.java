@@ -16,9 +16,9 @@ public class TesteStackPane extends StackPane {
 		
 		setOnMouseClicked(e -> {
 			if(e.getSceneX() > getScene().getWidth()/2) {
-				
+				getChildren().get(0).toFront();				
 			} else {
-				
+				getChildren().get(5).toBack();
 			}
 		});
 	}
