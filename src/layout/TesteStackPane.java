@@ -1,5 +1,6 @@
 package layout;
 
+import javafx.application.Platform;
 import javafx.scene.layout.StackPane;
 
 public class TesteStackPane extends StackPane {
@@ -26,7 +27,10 @@ public class TesteStackPane extends StackPane {
 			while(true) {
 				try {
 					Thread.sleep(3000);
-					getChildren().get(0).toFront();
+					
+					Platform.runLater(() -> {
+						getChildren().get(0).toFront();
+					});
 				} catch (Exception e) {
 					System.out.println(e.getMessage());
 				}
