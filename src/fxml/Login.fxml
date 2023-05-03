@@ -4,6 +4,11 @@
 <?import javafx.scene.control.*?>
 
 <GridPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+
+	<Label text="Seja bem-vindo"></Label>
+	<Label text="E-mail: "></Label>
+	<Label text="Senha: "></Label>
+	<Button text="Entrar">
+	</Button>
 </GridPane>
 
