@@ -13,7 +13,8 @@ public class LoginControlador {
 	private PasswordField campoSenha;
 	
 	public void entrar() {
-		System.out.println("Entrar");
+		System.out.println(campoEmail.getText());
+		System.out.println(campoSenha.getText());
 	}
 
 }

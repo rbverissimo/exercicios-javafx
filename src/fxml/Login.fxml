@@ -3,9 +3,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 
-<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.LoginControlador">
+<GridPane xmlns:fx="http://javafx.com/fxml/1" 
+	fx:controller="fxml.LoginControlador" styleClass="login">
 
-	<Label text="Seja bem-vindo" 
+	<Label text="Seja bem-vindo"
+		styleClass="login-titulo" 
 		GridPane.columnIndex="0" GridPane.rowIndex="0"></Label>
 	<Label text="E-mail: " 
 		GridPane.columnIndex="0" GridPane.rowIndex="1"></Label>
