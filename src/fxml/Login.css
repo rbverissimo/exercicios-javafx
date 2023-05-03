@@ -5,3 +5,12 @@
 .login-titulo {
 	-fx-font-size: 24px;
 }
+
+.login-form-label {
+	-fx-font-size: 16px;
+}
+
+.login-form-button {
+	-fx-font-size: 16px;
+}
+
