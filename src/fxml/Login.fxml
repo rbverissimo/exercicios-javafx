@@ -5,10 +5,17 @@
 
 <GridPane xmlns:fx="http://javafx.com/fxml/1">
 
-	<Label text="Seja bem-vindo"></Label>
-	<Label text="E-mail: "></Label>
-	<Label text="Senha: "></Label>
-	<Button text="Entrar">
+	<Label text="Seja bem-vindo" 
+		GridPane.columnIndex="0" GridPane.rowIndex="0"></Label>
+	<Label text="E-mail: " 
+		GridPane.columnIndex="0" GridPane.rowIndex="1"></Label>
+	<TextField 
+		GridPane.columnIndex="0" GridPane.rowIndex="2"></TextField>
+	<Label 
+		text="Senha: " GridPane.columnIndex="0" GridPane.rowIndex="3"></Label>
+	<PasswordField 
+		GridPane.columnIndex="0" GridPane.rowIndex="4"></PasswordField>		
+	<Button text="Entrar" GridPane.columnIndex="0" GridPane.rowIndex="5">
 	</Button>
 </GridPane>
 
